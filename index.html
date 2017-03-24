@@ -1,0 +1,111 @@
+<html>
+<head>
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static/css/app.css">
+    <link rel="stylesheet" href="static/css/custom.css">
+    <link rel="stylesheet" href="static/css/owl.theme.css">
+    <link rel="stylesheet" href="static/css/owl.transitions.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Hospital Mario Larrain</title>
+    <link rel="shortcut icon" href="static/imagenes/iso.png">
+</head>
+<body>
+<div class="menu-container js-menu-container">
+    <div class="container">
+        <div class="header-top js-header-top">
+            <img src="static/imagenes/marca.png" alt="Hospital" class="img-logo">
+            <ul class="redes">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            </ul>
+        </div>
+        <div class="header-main">
+            <ul id="menu">
+                <li class="col-md-2 menu-item" data-content="home"><a href="#">Principal</a></li>
+                <li class="col-md-2 menu-item" data-content="hosp"><a href="">Hospital</a></li>
+                <li class="col-md-3 menu-item" data-content="sintomas"><a href="#">Información Pacientes</a></li>
+                <li class="col-md-2 menu-item" data-content="habilidades"><a href="#">Plan Salud</a></li>
+                <li class="col-md-3 menu-item" data-content="edu"><a href="">Educación Investigacion</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="contenedor-slider js-home js-content">
+    <span class="lema">Bienvenido</span>
+    <h5>El sitio web del Hospital <br>Mario Larrain de Berisso</h5>
+    <img class="menu-item" data-content="sesion" src="static/imagenes/misesion.jpg"
+         style="z-index: 1; width: 1200px; position: absolute; margin-left: 140px; margin-top: 600px; cursor:pointer;">
+
+    <div id="owl-demo" class="owl-carousel owl-theme js-home js-content">
+        <img src="static/imagenes/slider/1.jpg" style="width: 100%">
+        <!-- <div class="item covered" style="background-image: url('static/imagenes/slider/1.jpg');"></div>
+         <div class="item covered" style="background-image: url('static/imagenes/slider/2.jpg');"></div>
+         <div class="item covered" style="background-image: url('static/imagenes/slider/3.jpg');"></div>
+         <div class="item covered" style="background-image: url('static/imagenes/slider/4.jpg');"></div>
+         <div class="item covered" style="background-image: url('static/imagenes/slider/5.jpg');"></div>
+         <div class="item covered" style="background-image: url('static/imagenes/slider/6.jpg');"></div>
+         <div class="item covered" style="background-image: url('static/imagenes/slider/7.jpg');"></div>-->
+    </div>
+</div>
+<div class="container main-content">
+    <div class="texto-dislexia js-habilidades js-content" style="width: 900px;">
+        <img src="static/imagenes/plan-salud.jpg" style="width: 1140px;">
+    </div>
+    <div class="texto-dislexia js-sintomas js-content">
+        <img src="static/imagenes/info-pacientes.jpg" style="width: 1140px;">
+    </div>
+    <div class="texto-dislexia js-sesion js-content" style="text-align: center">
+        <img src="static/imagenes/ingreso.png" style="width: auto;">
+    </div>
+    <!--<div class="texto-dislexia js-causas js-content">
+        <span class="title">Educación Investigacion</span>
+    </div>
+    <div class="texto-dislexia js-info js-content">
+        <span class="title">Hospital</span>
+    </div>-->
+</div>
+
+
+<script src="static/js/jquery-2.2.4.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/application.js"></script>
+<script src="static/js/scroll.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/app.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var h = $(window).height() - ($('.js-menu-container').height() + 40);
+        $("#owl-demo .item").height(h);
+
+        $("#owl-demo").owlCarousel({
+
+            navigation: false, // Show next and prev buttons
+            pagination: false, // Show next and prev buttons
+            slideSpeed: 150,
+            paginationSpeed: 400,
+            singleItem: true,
+            items: 1,
+            autoPlay: true
+
+            // "singleItem:true" is a shortcut for:
+            // itemsDesktop : false,
+            // itemsDesktopSmall : false,
+            // itemsTablet: false,
+            // itemsMobile : false
+
+        });
+    });
+
+    $(window).resize(function () {
+        var h = $(window).height() - ($('.js-menu-container').height() + 40);
+        $("#owl-demo .item").height(h);
+    });
+</script>
+</body>
+</html>
